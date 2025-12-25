@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jamparing Coffee</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- THREE JS -->
+  <script src="https://unpkg.com/three@0.158.0/build/three.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+</head>
+<body data-theme="light">
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <h1>Jamparing<span>Coffee</span></h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#chekout">Checkout</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+ <section class="hero">
+  <div class="hero-left">
+    <h1 class="hero-title">Premium Coffee<br><span>Dari Jamparing</h1>
+    <p class="hero-desc">
+      Jamparing Coffee menghadirkan cita rasa kopi terbaik dengan
+      proses sangrai modern dan karakter elegan.
+    </p>
+  </div>
+
+  <div class="hero-right">
+    <img src="foto/logo.png" alt="Jamparing Coffee Logo" class="hero-logo">
+    <canvas id="hero3d"></canvas>
+  </div>
+</section>
+
+
+  <!-- PRODUCTS -->
+  <section class="products">
+    <div class="product-card">
+      <canvas class="product3d" data-texture="foto/Arabica.png"></canvas>
+      <h3>Jamparing Arabica</h3>
+      <p>Asam seimbang, aroma floral.</p>
+      <strong>Rp 25.000</strong>
+    </div>
+
+    <div class="product-card">
+      <canvas class="product3d" data-texture="foto/Robusta.png"></canvas>
+      <h3>Jamparing Robusta</h3>
+      <p>Body kuat, pahit khas.</p>
+      <strong>Rp 25.000</strong>
+    </div>
+  </section>
+
+<!--CHEKOUT-->
+<section class="checkout-section" id="checkout">
+  <h2 class="checkout-title">Checkout</h2>
+
+  <div class="checkout-box">
+
+    <div class="checkout-item" data-price="25000">
+      <span class="item-name">Jamparing Arabica</span>
+
+      <div class="qty-control">
+        <button class="qty-btn minus">−</button>
+        <span class="qty">1</span>
+        <button class="qty-btn plus">+</button>
+      </div>
+
+      <span class="item-subtotal">Rp 25.000</span>
+    </div>
+
+    <div class="checkout-item" data-price="25000">
+      <span class="item-name">Jamparing Robusta</span>
+
+      <div class="qty-control">
+        <button class="qty-btn minus">−</button>
+        <span class="qty">0</span>
+        <button class="qty-btn plus">+</button>
+      </div>
+
+      <span class="item-subtotal">Rp 0</span>
+    </div>
+
+    <!-- TOTAL -->
+    <div class="checkout-total">
+      <span>Total</span>
+      <span id="totalPrice">Rp 25.000</span>
+    </div>
+
+    <button class="checkout-btn">Bayar Sekarang</button>
+  </div>
+</section>
+
+
+  <!--ABOUT-->
+<section class="about">
+  <h2>Tentang Jamparing Coffee</h2>
+  <p>
+    Jamparing Coffee menghadirkan kopi pilihan Nusantara
+    dengan proses sangrai terbaik untuk menghasilkan
+    aroma, rasa, dan kualitas premium.
+  </p>
+</section>
+
+<!--CTA-->
+<section class="cta">
+  <h2>Siap Menikmati Kopi Terbaik?</h2>
+  <p>Pesan sekarang dan rasakan kualitas kopi Jamparing.</p>
+  <a href="#" class="btn-primary">Beli Sekarang</a>
+</section>
+
+
+  <!-- THEME BUTTON -->
+  <button id="themeToggle">🌙</button>
+
+  <script src="script.js"></script>
+  <footer class="footer">
+  <p>© 2025 Jamparing Coffee • All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
